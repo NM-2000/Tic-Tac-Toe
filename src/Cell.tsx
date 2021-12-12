@@ -17,14 +17,25 @@ const styles = StyleSheet.create({
 });
 
 const Cell: React.FC<{
-    customStyles?: StyleProp<ViewStyle>
+    getTurn: () => number,
+    toggleTurn: () => void,
+    customStyles?: StyleProp<ViewStyle>,
 }> = ({
+    getTurn,
+    toggleTurn,
     customStyles,
 }) => {
     const [label, setLabel] = useState('');
 
     const onCellPress = useCallback(() => {
-        setLabel('X');
+        const turn = getTurn();
+        toggleTurn();
+        if(turn === 1) {
+            setLabel('X');
+        }
+        else {
+            setLabel('O');
+        }
     }, []);
 
     return (
