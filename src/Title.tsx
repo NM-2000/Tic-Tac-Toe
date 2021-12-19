@@ -8,8 +8,9 @@ const styles = StyleSheet.create({
         backgroundColor: 'seagreen',
     },
     titleStyle: {
-        fontSize: 40,
+        fontSize: 48,
         color: 'orange',
+        elevation: 10,
     }
 });
 

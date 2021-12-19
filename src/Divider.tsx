@@ -4,7 +4,7 @@ import { StyleSheet, View } from "react-native";
 const styles = StyleSheet.create({
     dividerStyle: {
         height: 8,
-        backgroundColor: 'lightyellow',
+        backgroundColor: 'tomato',
     }
 });
 
